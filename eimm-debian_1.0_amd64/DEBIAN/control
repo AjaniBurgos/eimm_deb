@@ -4,6 +4,6 @@ Architecture: amd64
 Essential: no
 Priority: optional
 Depends: 
-Maintainer: Ehelp@engr.unr.edu
+Maintainer: ehelp@engr.unr.edu
 Description: Package to set up a new Linux machine with the EIMM service, which allows for College faculty to keep track of the host information
 

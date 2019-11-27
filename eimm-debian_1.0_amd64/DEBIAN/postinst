@@ -1,3 +1,9 @@
 #!/bin/bash
-chmod +x /tmp/test.sh
-sh /tmp/test.sh
+chmod +x /tmp/setup.py
+sh /tmp/setup.py
+
+#===pseudocode, general steps after setup.py is run===
+
+#install other files in their proper place
+#insert certificates
+#dpkg-reconfigure ca-certificates
