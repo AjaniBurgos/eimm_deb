@@ -1,0 +1,3 @@
+#!/bin/bash
+chmod +x /tmp/test.sh
+sh /tmp/test.sh
