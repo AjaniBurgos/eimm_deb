@@ -1,9 +1,11 @@
 #!/bin/bash
-chmod +x /tmp/setup.py
-sh /tmp/setup.py
 
-#===pseudocode, general steps after setup.py is run===
+chmod +x /usr/local/bin/setup.py
 
-#install other files in their proper place
-#insert certificates
-#dpkg-reconfigure ca-certificates
+dpkg-reconfigure ca-certificates
+
+systemctl enable ecc-setup.service
+systemctl enable ecc-setup.timer
+
+systemctl start ecc-setup.service
+systemctl start ecc-setup.timer

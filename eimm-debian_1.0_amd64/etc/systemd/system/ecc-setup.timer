@@ -1,0 +1,9 @@
+[Unit]
+Description=Runs service hourly to report back to ECC EIMM database
+
+[Timer]
+OnBootSec=5min
+OnUnitActivateSec=60min
+
+[Install]
+WantedBy=timers.target

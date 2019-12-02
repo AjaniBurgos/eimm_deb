@@ -1,0 +1,12 @@
+[Unit]
+Description=ECC Setup Script
+After=network.target auditd.service
+
+[Service]
+EnvironmentFile=-/etc/default/ecc-setup
+ExecStart=/usr/bin/python3 /usr/local/bin/setup.py
+Type=oneshot
+
+[Install]
+WantedBy=multi-user.target
+alias=ecc-setup.service
