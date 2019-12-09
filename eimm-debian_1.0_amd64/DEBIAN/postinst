@@ -4,9 +4,6 @@ chmod +x /usr/local/bin/setup.py
 
 dpkg-reconfigure ca-certificates
 
-apt update -y
-apt install python-jinja2 python3-jinja2
-
 systemctl enable ecc-setup.service
 systemctl enable ecc-setup.timer
 
