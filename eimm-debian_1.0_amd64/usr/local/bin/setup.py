@@ -39,7 +39,7 @@ def main():
   hostname = subprocess.run(["hostname"], stdout=subprocess.PIPE)
 
   params = {'mac__iexact': '%s' % mac }
-  r = requests.get(api_url, cert = certs, params = params)
+  r = requests.get(api_url, cert = certs, params = params, verify = False)
 
   resp_json = r.json()
 
@@ -64,7 +64,7 @@ def main():
 
 
   print("Making request to {0}, params: {1}".format(update_url, update_string))
-  r = requests.put(update_url, cert=certs, data=json.dumps(update_string), headers=headers)
+  r = requests.put(update_url, cert=certs, data=json.dumps(update_string), headers=headers, verify=False)
 
   print("Response: %s,%s" % (r.status_code,r.text))
 
@@ -86,5 +86,3 @@ def main():
 
 if __name__ == '__main__':
   main()
-
-
