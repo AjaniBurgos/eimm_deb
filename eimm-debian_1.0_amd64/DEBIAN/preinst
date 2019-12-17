@@ -3,3 +3,4 @@
 apt update -y
 apt install python-jinja2 python3-jinja2
 
+mkdir /usr/share/ca-certificates/ecc
